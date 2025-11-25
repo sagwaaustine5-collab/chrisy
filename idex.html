@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Christmas Greeting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial;
+      background: #f1f1f1;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 350px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input {
+      width: 90%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      font-size: 17px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkred;
+    }
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>🎄 Christmas Greeting 🎄</h2>
+
+  <input id="name" type="text" placeholder="Enter your name">
+  <button onclick="greet()">Greet Me</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+  function greet() {
+    let name = document.getElementById("name").value.trim();
+    if (name === "") name = "Friend";
+    document.getElementById("result").innerText =
+      name + ", Merry Christmas! 🎅🎁";
+  }
+</script>
+
+</body>
+</html>
